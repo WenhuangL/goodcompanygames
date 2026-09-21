@@ -1,13 +1,13 @@
 ---
-title: Privacy Policy for Tango
+title: Privacy Policy for Gospel
 ---
 
 **Effective date:** 17 September 2026
 
-This policy explains what Tango does with information about you. It applies to the Tango mobile
+This policy explains what Gospel does with information about you. It applies to the Gospel mobile
 game on iOS and Android, published by Good Company Games ("we", "us").
 
-Tango is intended for a general audience, which includes children. Because of that we treat
+Gospel is intended for a general audience, which includes children. Because of that we treat
 everyone as a child unless they tell us otherwise, and we ask for a year of birth before anything
 else happens. That answer never leaves your device.
 
@@ -15,7 +15,7 @@ else happens. That answer never leaves your device.
 
 Nothing that identifies you.
 
-Tango has no sign-in, no name or email field, no leaderboards and no chat. It stores the
+Gospel has no sign-in, no name or email field, no leaderboards and no chat. It stores the
 following on the device, using the operating system's own app storage:
 
 - which levels you have finished, and how quickly
@@ -26,18 +26,22 @@ following on the device, using the operating system's own app storage:
 
 Uninstalling the game removes all of it from the device.
 
-**A copy of your level times is kept online**, so that reinstalling the game or changing phone
-does not lose your progress. That copy contains level numbers and how many seconds each took, and
+**A copy of your level times is kept online**, so that your progress is not lost if the game's
+stored data is cleared. That copy contains level numbers and how many seconds each took, and
 nothing else — no name, no email, no address book, nothing you have typed. It is stored against an
 anonymous identifier created for the installation, which we cannot connect to you, to any other
 app, or to advertising.
+
+Because that identifier belongs to the installation rather than to you, **uninstalling the game
+ends it**. A fresh install is a new anonymous identifier and starts from the beginning; it cannot
+reach the earlier progress, and neither can we.
 
 **We measure how the game is played**, but only for players aged 16 or over who have not turned it
 off. See below.
 
 ## What advertising collects
 
-Tango shows advertisements supplied by Google AdMob. Google's advertising software runs inside
+Gospel shows advertisements supplied by Google AdMob. Google's advertising software runs inside
 the app and collects information for that purpose, including:
 
 - device advertising identifiers, and general device information such as model and operating
@@ -46,7 +50,7 @@ the app and collects information for that purpose, including:
 - whether an advertisement was shown, viewed or tapped
 
 **If the year of birth entered on first launch indicates a child, or no answer is available,
-Tango instructs Google to serve only non-personalised advertisements and to restrict content to
+Gospel instructs Google to serve only non-personalised advertisements and to restrict content to
 its most general rating.** Non-personalised advertisements still use coarse location and
 information about the app itself in order to be shown at all, but they are not selected using a
 profile of the person watching.
@@ -98,7 +102,7 @@ so it can unlock what you paid for. The stores' own privacy policies apply to th
 ## Your rights
 
 Depending on where you live, you may have the right to ask what information is held about you, to
-have it corrected or deleted, or to object to its use. Because Tango holds nothing about you on
+have it corrected or deleted, or to object to its use. Because Gospel holds nothing about you on
 our side, most such requests are best directed to Google, whose links are above. You are welcome
 to write to us at goodcompanygamesco@gmail.com and we will help where we can.
 
@@ -108,7 +112,7 @@ game could not be free).
 
 ## Children
 
-Tango is not directed exclusively at children, but we expect children to play it. We do not
+Gospel is not directed exclusively at children, but we expect children to play it. We do not
 knowingly collect personal information from a child for any purpose other than showing a
 non-personalised advertisement, as described above. If you believe a child has provided us with
 personal information, write to goodcompanygamesco@gmail.com and we will delete it.

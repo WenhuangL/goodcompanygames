@@ -6,7 +6,7 @@ title: Good Company Games
 
 We make small, unhurried games.
 
-## Tango
+## Gospel
 
 A logic puzzle for iOS and Android. Fill the grid so no three of a kind sit in
 a row, every line balances, and the marks between cells are satisfied.
