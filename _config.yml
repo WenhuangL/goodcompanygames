@@ -1,3 +1,19 @@
 theme: jekyll-theme-primer
 title: Good Company Games
 description: Small, unhurried games.
+lang: en-GB
+# Where link previews point, whichever address the page was fetched from.
+url: https://goodcompanygames.co
+
+# Notes for the owner, not pages for visitors.
+exclude:
+  - DNS.md
+
+# Every page gets the site's own layout, so the theme's never shows (it loads a script from a
+# third-party CDN). Pages that need their own head, like /gospel/, are plain HTML without front
+# matter and are copied as they are.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

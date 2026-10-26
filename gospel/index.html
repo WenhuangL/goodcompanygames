@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // The game's Share buttons link here as goodcompanygames.co/gospel?c=<campaign>. A phone goes
+    // straight on to its store, carrying the campaign; anything else stays and sees the page.
+    (function () {
+      // Fill these in as Gospel reaches each store; DNS.md says where the two Apple values are.
+      // While a store is not live, its phones stay here too and its button reads "Coming soon".
+      var APP_STORE_ID = "";     // the app's Apple ID, digits only
+      var PROVIDER_TOKEN = "";   // the pt= number from App Analytics → Campaigns
+      var IOS_LIVE = false;
+      var ANDROID_LIVE = false;
+
+      var PLAY_PACKAGE = "com.goodcompanygames.gospel";
+
+      // Letters, digits and hyphens only, so it is safe in both stores' links as it stands.
+      var campaign = "";
+      var match = /[?&]c=([^&#]*)/.exec(location.search);
+      if (match) {
+        try { campaign = decodeURIComponent(match[1]); } catch (e) { campaign = match[1]; }
+        campaign = campaign.replace(/[^A-Za-z0-9-]/g, "").slice(0, 30);
+      }
+
+      var appStoreQuery = [];
+      if (PROVIDER_TOKEN) appStoreQuery.push("pt=" + encodeURIComponent(PROVIDER_TOKEN));
+      if (campaign) appStoreQuery.push("ct=" + campaign);
+      var appStore = "https://apps.apple.com/app/id" + APP_STORE_ID +
+          (appStoreQuery.length ? "?" + appStoreQuery.join("&") : "");
+
+      var referrer = "utm_source=gospel_link&utm_medium=share" +
+          (campaign ? "&utm_campaign=" + campaign : "");
+      var play = "https://play.google.com/store/apps/details?id=" + PLAY_PACKAGE +
+          "&referrer=" + encodeURIComponent(referrer);
+
+      var iosLive = IOS_LIVE && /^[0-9]+$/.test(APP_STORE_ID);
+      var ua = navigator.userAgent || "";
+      // iPadOS asks for desktop sites by default and so says it is a Mac; a Mac has no touchscreen.
+      var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      var android = !ios && /Android/.test(ua);
+
+      if (ios && iosLive) { location.replace(appStore); return; }
+      if (android && ANDROID_LIVE) { location.replace(play); return; }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        offer("ios", iosLive, appStore);
+        offer("android", ANDROID_LIVE, play);
+      });
+
+      function offer(store, live, href) {
+        if (!live) return;
+        var link = document.getElementById(store + "-link");
+        link.href = href;
+        link.hidden = false;
+        document.getElementById(store + "-soon").hidden = true;
+      }
+    })();
+  </script>
+  <meta name="color-scheme" content="light only">
+  <title>Gospel — a daily logic puzzle that ends in scripture</title>
+  <meta name="description" content="One puzzle a day, the same for everyone: fill the grid with Jesus and the Bible by logic alone, and finish on the day's verse. For iPhone, iPad and Android.">
+  <link rel="canonical" href="https://goodcompanygames.co/gospel/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Good Company Games">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Gospel — a daily logic puzzle that ends in scripture">
+  <meta property="og:description" content="One puzzle a day, the same for everyone: fill the grid with Jesus and the Bible by logic alone, and finish on the day's verse.">
+  <meta property="og:url" content="https://goodcompanygames.co/gospel/">
+  <meta property="og:image" content="https://goodcompanygames.co/gospel/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Gospel app icon, Jesus and a Bible on a puzzle grid, beside the words: a daily logic puzzle that ends in scripture.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gospel — a daily logic puzzle that ends in scripture">
+  <meta name="twitter:description" content="One puzzle a day, the same for everyone: fill the grid with Jesus and the Bible by logic alone, and finish on the day's verse.">
+  <meta name="twitter:image" content="https://goodcompanygames.co/gospel/og.png">
+  <meta name="twitter:image:alt" content="The Gospel app icon, Jesus and a Bible on a puzzle grid, beside the words: a daily logic puzzle that ends in scripture.">
+
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="masthead wrap"><a href="../">Good Company Games</a></header>
+
+  <main class="wrap">
+    <section class="hero">
+      <img class="app-icon" src="icon.png" width="120" height="120" alt="">
+      <h1 class="wordmark">Gospel</h1>
+      <p class="tagline">A daily logic puzzle that ends in scripture.</p>
+
+      <div class="stores">
+        <a class="store" id="ios-link" href="https://apps.apple.com/" hidden><small>Download on the</small>App Store</a>
+        <span class="store soon" id="ios-soon"><small>Coming soon to the</small>App Store</span>
+        <a class="store" id="android-link" href="https://play.google.com/store/apps" hidden><small>Get it on</small>Google Play</a>
+        <span class="store soon" id="android-soon"><small>Coming soon to</small>Google Play</span>
+      </div>
+      <p class="platforms">For iPhone, iPad and Android. Free, with ads; one purchase removes them.</p>
+    </section>
+
+    <ul class="screens">
+      <li>
+        <figure>
+          <img src="screens/title.jpg" width="540" height="1170" loading="lazy"
+               alt="The title screen, with Continue, Daily puzzle, Levels and Endless.">
+          <figcaption>Forty levels, then endless</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="screens/play.jpg" width="540" height="1170" loading="lazy"
+               alt="A puzzle half solved. A hint explains the next square: two Bibles sit next to it, so it must be Jesus.">
+          <figcaption>Hints that explain themselves</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="screens/rules.jpg" width="540" height="1170" loading="lazy"
+               alt="How to play: no more than two of the same symbol side by side, and every row and column holds four of each.">
+          <figcaption>Learn it in a minute</figcaption>
+        </figure>
+      </li>
+    </ul>
+
+    <section class="verse">
+      <img src="verse.jpg" width="720" height="900" loading="lazy"
+           alt="The picture shared for a day's verse: Romans 12:2 over a painting of Saint John on Patmos.">
+      <div>
+        <h2>One puzzle a day, and a verse at the end of it</h2>
+        <p>Everyone gets the same daily puzzle. Solve it and the day's verse is yours, with a
+          picture of it to share if you'd like someone to play alongside you.</p>
+      </div>
+    </section>
+
+    <section class="points">
+      <div class="point">
+        <h2>Logic, never luck</h2>
+        <p>Place Jesus and the Bible so no three of a kind sit in a row and every line balances.
+          Each puzzle has one answer, and you never need to guess.</p>
+      </div>
+      <div class="point">
+        <h2>Through the whole story</h2>
+        <p>Forty levels from the Creation to the Cross, each act set over a painting by an old
+          master. After that, endless puzzles.</p>
+      </div>
+      <div class="point">
+        <h2>Made for all ages</h2>
+        <p>No sign-in and no chat. The game itself collects nothing that identifies you, and
+          children only ever see non-personalised ads. <a href="../privacy/">Privacy policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Gospel is made by <a href="../">Good Company Games</a>.</p>
+      <p><a href="mailto:goodcompanygamesco@gmail.com">goodcompanygamesco@gmail.com</a> · <a href="../privacy/">Privacy</a></p>
+      <p class="quiet">This site sets no cookies and runs no analytics.</p>
+    </div>
+  </footer>
+</body>
+</html>
