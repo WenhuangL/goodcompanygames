@@ -2,7 +2,7 @@
 title: Privacy Policy for Gospel
 ---
 
-**Effective date:** 17 September 2026
+**Effective date:** 28 October 2026
 
 This policy explains what Gospel does with information about you. It applies to the Gospel mobile
 game on iOS and Android, published by Good Company Games ("we", "us").
@@ -23,6 +23,8 @@ following on the device, using the operating system's own app storage:
 - whether you have completed today's daily puzzle
 - the year of birth you entered on first launch
 - a note of whether you have bought anything
+- whether you switched on the daily reminder and at what time, and when you started your last
+  few daily puzzles — used only to suggest a time for the reminder
 
 Uninstalling the game removes all of it from the device.
 
@@ -85,7 +87,9 @@ so it can unlock what you paid for. The stores' own privacy policies apply to th
 - We do not sell or share personal information, in the sense the California Consumer Privacy Act
   gives those words.
 - We do not use your information to build a profile of you.
-- We do not send you email, notifications or marketing.
+- We do not send you email or marketing. The only notification the game sends is the daily
+  reminder, and only if you ask for it. It is scheduled on your device by the device itself:
+  nothing about it is sent to us or to anyone else, and we have no way to send you one.
 - We do not knowingly collect personal information from children beyond what is described above.
 
 ## Your choices
@@ -97,6 +101,8 @@ so it can unlock what you paid for. The stores' own privacy policies apply to th
   requested and the advertising software makes no further requests.
 - **Change your advertising consent** from the game's Settings screen, if you are in a region
   where consent is required.
+- **Turn the daily reminder off** from the game's Settings screen, or in your device's own
+  notification settings. It is never offered to anyone the game treats as a child.
 - **Delete everything** by uninstalling the game.
 
 ## Your rights
@@ -119,7 +125,7 @@ personal information, write to goodcompanygamesco@gmail.com and we will delete i
 
 ## Changes
 
-If this policy changes, the new version will be posted at https://wenhuangl.github.io/goodcompanygames/privacy/ and the effective date
+If this policy changes, the new version will be posted at https://goodcompanygames.co/privacy/ and the effective date
 above will change. Material changes will be announced in the game.
 
 ## Contact
